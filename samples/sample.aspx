@@ -31,6 +31,12 @@
     font-family: "宋体"
   }
   </style>
+  <script>
+    function test(id) {
+      var p = document.getEnvironmentbyId('id');
+      if (p != null) p.innerxml = 'text';
+    }
+  </script>
   <form id="form1" runat="server">
     <div>
       <table width="1100" border="0" align="center">
@@ -214,7 +220,7 @@
                             { %>
                             <td><%# DataBinder.Eval(Container.DataItem,"SUPPLIESNAME")%>&nbsp;</td>
                             <%} %>
-                            @*abc.def*@
+                            <%abc.def%>
                             <td><%# DataBinder.Eval(Container.DataItem,"GuiGe")%>&nbsp;</td>
                             <td><%# DataBinder.Eval(Container.DataItem,"SNUMBER")%>&nbsp;</td>
                             <td><%# DataBinder.Eval(Container.DataItem,"ACUNITCODE")%>&nbsp;</td>
